@@ -1,0 +1,158 @@
+body {
+    background-color: #9ec5f7;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+.Container {
+    text-align: center;
+    background: #89b3e9;
+    width: 700px;
+    min-height: 500px;
+    margin: 10px auto;
+    border-radius: 10px;
+    padding: 10px;
+    border: 3px solid #66a3f1;
+}
+
+.section-top>h3 {
+    color: #af15e1;
+    font-family: cursive;
+    font-size: 24px;
+    display: block;
+    border: 2px dotted;
+    width: 60%;
+    padding: 5px;
+    margin: auto;
+}
+
+.section-top>img {
+    height: 100px;
+    margin: 10px 0;
+}
+
+.section-middle {
+    text-align: center;
+    position: relative;
+}
+
+.section-middle>input {
+    background-color: #efe6e6;
+    width: 60%;
+    height: 35px;
+    appearance: none;
+    text-indent: 10px;
+    border-radius: 5px;
+    border: 1px dotted #e114ef;
+}
+
+.section-middle>input:focus, .section-middle>input:active {
+    border: 1px dotted #e114ef;
+    outline: none;
+}
+
+.section-middle .fa-plus, .edit1 {
+    position: absolute;
+    top: 11px;
+    right: 21%;
+    color: #16a771;
+    cursor: pointer;
+}
+
+.section-middle .fa-plus:hover {
+    color: #0e7851;
+}
+
+.itemList {
+    padding: 10px 0 4px 0;
+}
+
+.items {
+    width: 58%;
+    height: 40px;
+    line-height: 0px;
+    background: #af15e1;
+    margin-top: 5px;
+    border-radius: 5px;
+    padding: 0 10px;
+    color: #ede7e7;
+    margin: auto;
+    display: flex;
+    align-content: space-around;
+    justify-content: space-between;
+}
+
+.action {
+    line-height: 40px;
+}
+.fa-edit:hover,.fa-trash-alt:hover{
+    cursor: pointer;
+    color: #fff;
+}
+.glow-on-hover {
+    width: 112px;
+    height: 43px;
+    border: none;
+    outline: none;
+    margin-top: 25px;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left: -2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity: 1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 400% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
